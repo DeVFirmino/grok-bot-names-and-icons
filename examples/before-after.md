@@ -6,14 +6,18 @@ This walks through a six-bot sidebar from start to finish. The "before" names ar
 
 | Before (example) | What it was used for | Avatar |
 | --- | --- | --- |
-| JobHunter Pro v2 | Finding roles, tailoring applications | Default shape |
-| XFeed Watcher | Following X and news | Default shape |
-| Code Helper (new) | Coding and debugging | Default shape |
-| Writer Assistant 2 | Drafting blog posts | Default shape |
-| Inbox Thing | Email triage and replies | Default shape |
-| Deep Research Bot | Long research reports | Default shape |
+| JobHunter Pro v2 | Finding roles, tailoring applications | Default blob |
+| XFeed Watcher | Following X and news | Default blob |
+| Code Helper (new) | Coding and debugging | Default blob |
+| Writer Assistant 2 | Drafting blog posts | Default blob |
+| Inbox Thing | Email triage and replies | Default blob |
+| Deep Research Bot | Long research reports | Default blob |
 
-Three of the names describe the bot rather than the job ("Helper", "Assistant", "Bot"), two carry a version, and the default avatars don't help tell them apart.
+This is what the default avatars look like in a real sidebar (another user's public screenshot, with previews blurred):
+
+<img src="../assets/sidebar-before-default.png" width="300" alt="A Grok Bot sidebar with bots such as Email Helper 2, New Agent and Task List Agent, each using a default coloured blob avatar">
+
+Three of the example names describe the bot rather than the job ("Helper", "Assistant", "Bot"), two carry a version, and the default avatars don't help tell them apart.
 
 ## 2. New names
 
