@@ -95,6 +95,7 @@ A rename or a new picture changes only how a bot looks. It doesn't migrate the b
 
 ```text
 README.md                    you are here
+LICENSE                      MIT
 checklist.md                 short verification list
 prompts/
   01-rename-bots.md          propose short functional names
@@ -116,15 +117,10 @@ assets/
   src/makeover-flow.excalidraw  diagram source (open in excalidraw.com)
 ```
 
-## Related
-
-- [Avatar Profile Designer](https://x.com/rahulio/status/2116704132434219011) by @rahulio, a public bot template that draws storybook-style avatars for your bots. A good fit if you want illustrations instead of pictograms.
-- [Pins and sections](https://x.com/WheelerMan/status/2110078746132955399), a tip from @WheelerMan: right-click a bot in the sidebar to pin it or group bots into sections. Short names and icons work well together with this.
-
 ## About this project
 
 This is an independent community kit. It is not affiliated with or endorsed by the makers of Grok Bot. Menu names and available actions can change between app versions, so the prompts describe what to ask for rather than where to click.
 
 ## License
 
-Not chosen yet.
+[MIT](LICENSE). The prompts, docs and icons can be copied, changed and shared, including in commercial work.

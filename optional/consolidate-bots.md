@@ -13,7 +13,7 @@ When you rename a bot, edit its profile or start using a different bot for its j
 
 Anything you want the remaining bot to know or do has to be given to it again, through the app's normal features.
 
-Hiding a bot is not the same as retiring it. As [@GrokBotRadar points out](https://x.com/GrokBotRadar/status/2105513032915038493), a hidden bot leaves the sidebar but its routines keep running on schedule. Check the app's own help for how hiding, archiving and deleting behave in your version.
+Hiding a bot only takes it off the sidebar; it does not retire it, and its routines can keep running. Check the app's own help for how hiding, archiving and deleting behave in your version.
 
 ## Prompt
 
