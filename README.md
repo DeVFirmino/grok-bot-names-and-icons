@@ -12,6 +12,12 @@ The left side shows Grok Bot's default avatars, the coloured blobs with two eyes
 
 The right side is the real sidebar this kit came from, after the makeover. It was in Portuguese, so the bot names and visible replies are translated, and one unrelated message preview is blurred. The replies under each name are the bots confirming their own avatar change.
 
+## Demo
+
+![A 15-second demo: a sidebar of bots with default avatars, the question "Which bot does what?", six example icons named Career, Radar, Dev, Blog, Email and Research, the real sidebar after the makeover, and the 35-icon library](assets/agent-makeover-demo.gif)
+
+A sharper copy is in [assets/agent-makeover-demo.mp4](assets/agent-makeover-demo.mp4).
+
 ## Start here
 
 Paste this into any assistant chat, then fill in your list. It only proposes names; nothing changes until you decide.
@@ -114,6 +120,7 @@ assets/
   sidebar-before-default.png default avatars, from a public screenshot (redacted)
   sidebar-after-real.png     real sidebar after the makeover (translated, cropped)
   makeover-flow.png          the flow above
+  agent-makeover-demo.gif / .mp4  the demo video
   src/makeover-flow.excalidraw  diagram source (open in excalidraw.com)
 ```
 
