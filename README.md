@@ -6,6 +6,8 @@ A short name and a matching icon for each part of your life, on the Grok Bot bot
 
 Watch the higher-resolution [assets/agent-makeover-demo.mp4](assets/agent-makeover-demo.mp4).
 
+For the whole method in one read, with an example roster, see the walkthrough on danieldias.dev: [How to organise your Grok Bots: one bot, one job](https://danieldias.dev/en/blog/one-bot-one-job-tidying-up-grok-bots).
+
 ## TL;DR
 
 Organise the bots you already use by part of life. Each one gets a short name and an icon from a 35-icon library. Agent Makeover includes the [catalog](catalog.md), prompts, icons and a checklist.
