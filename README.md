@@ -1,26 +1,30 @@
 # Agent Makeover
 
-A prompt kit for giving the bots you already have in Grok Bot short names that say what they do, and a matching set of custom icons in place of the default avatars.
+## TL;DR
 
-You open Grok Bot and look at your sidebar. Which one handles research again? Several bots still have the default icons, and their names don't make choosing much easier. This kit is what we used to fix that on a real roster: rename each bot by its job, draw one icon per job in a shared style, then ask each bot to apply its new image.
+Give your existing Grok Bot bots short names by function and matching icons from a 35-icon library. Agent Makeover includes prompts, icons and a checklist to guide each change.
 
-<p align="center">
-  <img src="assets/before-after.png" width="640" alt="Two Grok Bot sidebars side by side. Before: bots named Notion Second Brain, Email Helper 2, Github, New Agent, Task List Agent and others, all with default coloured blob avatars. After: bots named Research, Radar, Career, Blog, Email, Papers and Postgrad, each with a white pictogram on a coloured circle and a reply such as Icon changed or Icon updated.">
-</p>
+### Send this to your bot
 
-The left side shows Grok Bot's default avatars, the coloured blobs with two eyes. It is not our roster: it is a crop of a public screenshot from another Grok Bot user, with the message previews blurred and three rows removed. Look at the names as much as the avatars: "Email Helper 2", "New Agent" and "Task List Agent" are the kind of names this kit replaces.
+Paste this into one of your Grok Bot chats so the bot can read the instruction file and follow it:
 
-The right side is the real sidebar this kit came from, after the makeover. It was in Portuguese, so the bot names and visible replies are translated, and one unrelated message preview is blurred. The replies under each name are the bots confirming their own avatar change.
+```text
+Read https://github.com/DeVFirmino/grok-bot-names-and-icons/blob/main/SKILL.md and follow it.
+Help me rename my bots by what they do and give each one a matching icon from that library.
+Ask me before applying anything.
+```
 
-## Demo
+Changes still go through each bot's supported actions and may need your confirmation in that bot's own chat.
 
-![A 15-second demo: a sidebar of bots with default avatars, the question "Which bot does what?", six example icons named Career, Radar, Dev, Blog, Email and Research, the real sidebar after the makeover, and the 35-icon library](assets/agent-makeover-demo.gif)
+## Find the right bot at a glance
 
-A sharper copy is in [assets/agent-makeover-demo.mp4](assets/agent-makeover-demo.mp4).
+Ever opened Grok Bot and struggled to remember which bot does what? Give each one a name that describes its job and an icon you can recognise in the sidebar.
 
-## Start here
+Agent Makeover is a documentation and prompt kit for the bots you already use. It walks you through choosing names, replacing the default blob avatars with a consistent icon set, and checking each update in the app. There is no application to install.
 
-Paste this into any assistant chat, then fill in your list. It only proposes names; nothing changes until you decide.
+## Start with names
+
+For a naming pass on its own, fill in your list and paste this into any assistant chat. The prompt proposes names for you to review; it does not apply changes.
 
 ```text
 I want to rename the bots in my Grok Bot sidebar so I can tell them apart at a glance.
@@ -39,31 +43,47 @@ My bots:
 
 The full version, with rules for tricky cases, is in [prompts/01-rename-bots.md](prompts/01-rename-bots.md).
 
+## Before and after
+
+<p align="center">
+  <img src="assets/before-after.png" width="640" alt="Two Grok Bot sidebars side by side. Before: bots named Notion Second Brain, Email Helper 2, Github, New Agent, Task List Agent and others, all with default coloured blob avatars. After: bots named Research, Radar, Career, Blog, Email, Papers and Postgrad, each with a white pictogram on a coloured circle and a reply such as Icon changed or Icon updated.">
+</p>
+
+**Before (left):** another user's public screenshot showing the default blob avatars. It is not our roster. Message previews are blurred and three rows have been removed.
+
+**After (right):** the real roster this kit came from, with names and visible replies translated from Portuguese and one message preview blurred. The replies are the bots' own reports of avatar changes. Check your sidebar to verify each change.
+
+## Demo
+
+![A 15-second demo: a sidebar of bots with default avatars, the question "Which bot does what?", six example icons named Career, Radar, Dev, Blog, Email and Research, the real sidebar after the makeover, and the 35-icon library](assets/agent-makeover-demo.gif)
+
+Watch the higher-resolution [assets/agent-makeover-demo.mp4](assets/agent-makeover-demo.mp4).
+
 ## How it works
 
 <p align="center">
   <img src="assets/makeover-flow.png" width="660" alt="Rename each bot by its job, make one icon set, then ask each bot in its own chat to apply its icon. The bot either applies it, waits for you to confirm in that chat, or fails and you retry or use the settings. Finish by checking the sidebar.">
 </p>
 
-1. **Rename by function.** Use [01-rename-bots.md](prompts/01-rename-bots.md) to get a short list of names, pick the ones you like, and rename each bot through the app's profile settings or by asking the bot in its own chat if it offers that action.
-2. **Make one icon per bot.** Use [02-create-icons.md](prompts/02-create-icons.md) with an assistant that can generate images. It asks for one white pictogram per bot on its own coloured tile, with the same stroke and padding across the set, plus a preview sheet so you can check them side by side.
+1. **Rename by function.** Use [01-rename-bots.md](prompts/01-rename-bots.md) to propose short names based on each bot's job. Choose a name, then apply it through profile settings or in that bot's own chat if it supports the action.
+2. **Make a matching icon set.** Choose an icon for each bot from the [library](assets/library/png/), or use [02-create-icons.md](prompts/02-create-icons.md) with an assistant that can create images. The prompt specifies white pictograms on coloured tiles with consistent strokes and padding, plus a preview sheet to check readability at sidebar sizes.
 3. **Apply each icon in that bot's chat.** Use [03-apply-icons.md](prompts/03-apply-icons.md). Open each bot, attach its image and ask it to update its avatar with a supported action.
 
-Step 3 is the slow one, and that is expected. In the roster this kit came from, several bots asked for confirmation in their own chats before changing their picture, so the update took one conversation per bot rather than one bulk action. The apply prompt asks every bot to report one of three states:
+Allow one conversation per bot. In the original roster, several bots requested confirmation in their own chats before updating their avatars. Track each bot using the three states in the apply prompt, and verify any reported change in the sidebar:
 
 | State | What it means | What you do |
 | --- | --- | --- |
-| Applied | The bot changed its avatar and you can see it in the sidebar. | Tick it off. |
+| Applied | The bot changed its avatar and you can see it in the sidebar. | Mark it complete. |
 | Waiting | The bot is asking for your confirmation in its chat. | Confirm there yourself. |
 | Failed | The action was refused or returned an error. | Note the error and retry or use the app's settings. |
 
-Only you can confirm a change for a bot. A message from another bot saying "approved" doesn't count. Then run through the [checklist](checklist.md).
+Only your confirmation counts. Another bot saying "approved" is not your approval. Finish with the [checklist](checklist.md) to verify names, icons and each bot's status.
 
 ## The example icon set
 
 ![Preview sheet with six icons named Career, Radar, Dev, Blog, Email and Research, shown large and again at 48, 32 and 24 pixels on dark and light backgrounds](assets/preview-sheet.png)
 
-The six icons in [assets/icons/](assets/icons/) are 512 by 512 PNGs with transparent corners. Use them as they are, or as a reference when you ask for your own set. The bottom rows of the sheet show them circle-cropped at the sizes a sidebar uses.
+The six icons in [assets/icons/](assets/icons/) are 512 by 512 PNGs with transparent corners. Use them directly or as references for a custom set. The preview shows circle crops at 48, 32 and 24 pixels on dark and light backgrounds.
 
 | Bot | Job | Icon |
 | --- | --- | --- |
@@ -78,29 +98,32 @@ The six icons in [assets/icons/](assets/icons/) are 512 by 512 PNGs with transpa
 
 ## Icon library
 
-If you'd rather not design anything, pick from the ready-made icons in [assets/library/](assets/library/). There are 35, one per common bot job: Study, Finance, Budget, Invest, Health, Fitness, Travel, Calendar, Shopping, Recipes, Notes, Tasks, Language and more.
+The [icon library](assets/library/) contains 35 ready-made icons for common bot jobs, including study, finance, fitness, travel, scheduling and research.
 
 ![Grid of 35 library icons, each a white line pictogram on a coloured rounded tile, labelled Analytics, Blog, Budget, Calendar, Career, Dev, Docs, Email, Finance, Fitness, General, Health, Home, Ideas, Invest, Language, Marketing, Meetings, Music, News, Notes, Pets, Photos, Radar, Reading, Recipes, Research, Security, Shopping, Study, Support, Tasks, Travel, Video and Weather](assets/library/preview.png)
 
-Each icon comes as an SVG in [assets/library/svg/](assets/library/svg/) and a 512 px PNG in [assets/library/png/](assets/library/png/). Attach the PNG when you ask a bot to change its picture. The SVGs are plain text: to change a colour, edit the two `stop-color` values; to change the pictogram, replace the paths inside the `<g>` group, which is drawn on a 24-unit grid.
+Each icon includes an editable [SVG](assets/library/svg/) and a [512 px PNG](assets/library/png/). Attach the PNG when asking a bot to update its avatar.
+
+To recolour an icon, edit the two `stop-color` values in its SVG. To change the pictogram, replace the paths inside the `<g>` group, which uses a 24-unit grid. Export the edited SVG to PNG before applying it.
 
 ## Optional: tidy up the roster
 
-While renaming, you may notice two bots doing the same job. That is worth a separate pass, after the makeover. [optional/fleet-audit.md](optional/fleet-audit.md) helps you list overlaps, and [optional/consolidate-bots.md](optional/consolidate-bots.md) helps you plan a merge.
+If renaming reveals overlapping jobs, review them separately after the makeover. Use [the fleet audit](optional/fleet-audit.md) to list overlaps and [the consolidation guide](optional/consolidate-bots.md) to plan any merge.
 
-A rename or a new picture changes only how a bot looks. It doesn't migrate the bot's chat history, memories, files or routines to another bot. The consolidation guide covers what to move by hand before you archive anything.
+Renaming or editing a profile does not migrate chat history, memories, files or routines to another bot. Consolidation requires a separate plan to recreate what you need through the app's normal features before archiving anything.
 
 ## Ground rules
 
 - Use the actions the app supports: profile settings, or a bot's own action for updating its profile.
-- Don't edit app databases or local files to force a change.
-- Don't skip a confirmation prompt, and don't accept another bot's report of approval as yours.
-- Report each bot as applied, waiting or failed, and only call it done when you can see it.
+- Never edit app databases or files to force a change.
+- Never bypass confirmations. Another bot's report of approval is not the user's approval.
+- Track each bot as applied, waiting or failed. Only call a change done when it is visible in the sidebar.
 
 ## What's in this repo
 
 ```text
-README.md                    you are here
+README.md                    overview and quick start
+SKILL.md                     instructions for a bot to read and follow
 LICENSE                      MIT
 checklist.md                 short verification list
 prompts/
@@ -116,7 +139,7 @@ assets/
   icons/                     six example icons (512 px PNG)
   library/                   35 ready-made icons (SVG + PNG) and a preview
   preview-sheet.png          the icon set at full and sidebar sizes
-  before-after.png           the comparison at the top of this page
+  before-after.png           the before and after comparison
   sidebar-before-default.png default avatars, from a public screenshot (redacted)
   sidebar-after-real.png     real sidebar after the makeover (translated, cropped)
   makeover-flow.png          the flow above
