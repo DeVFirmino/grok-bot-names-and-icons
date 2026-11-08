@@ -2,7 +2,9 @@
 
 Use this in any assistant chat. It proposes names only. You stay in charge of what gets renamed.
 
-Before you start, write down each bot's current name and, in a few words, what you actually use it for. Go by what you use it for today, not by what the bot was set up to do months ago.
+Before you start, write down each bot's current name and, in a few words, what you actually use it for today.
+
+Where that job matches a row in the [catalog](../catalog.md), use the catalog name. The catalog is one bot per part of life: work, money, home, health, learning, keeping up, writing, making, trips, accounts, and General for a bot that still covers several parts.
 
 ## Prompt
 
@@ -15,6 +17,7 @@ Rules for the new names:
 - No version numbers, no "assistant", "bot", "helper", "new", "pro".
 - Different first letters where possible, so the list is easy to scan.
 - Plain words a stranger would understand. No inside jokes.
+- If the job fits one of these catalog names, use it: Analytics, Blog, Budget, Calendar, Career, Dev, Docs, Email, Finance, Fitness, General, Health, Home, Ideas, Invest, Language, Marketing, Meetings, Music, News, Notes, Pets, Photos, Radar, Reading, Recipes, Research, Security, Shopping, Study, Support, Tasks, Travel, Video, Weather. General is the spare name when one bot still covers several parts of life.
 - If a bot does two unrelated jobs, say so and suggest which job the name should follow.
 - If two bots seem to do the same job, flag it in a separate list. Don't propose merging
   them here.

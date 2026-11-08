@@ -5,6 +5,7 @@ Run through this after the makeover.
 ## Names
 
 - [ ] Every bot's name says what it does in one or two words.
+- [ ] The name is a row in the [catalog](catalog.md), or you wrote down why no row fit.
 - [ ] No two bots have names that could be confused.
 - [ ] You can find the bot you want without reading the message previews.
 

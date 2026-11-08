@@ -34,6 +34,8 @@ Running [the rename prompt](../prompts/01-rename-bots.md) on this list gives one
 
 "Radar" is the one name that isn't literal. It was kept because it's short and the icon makes the meaning obvious.
 
+In the [catalog](../catalog.md), Career and Dev are [Work](../catalog.md#work), Radar and Email are [Keeping up](../catalog.md#keeping-up), Blog is [Writing](../catalog.md#writing), and Research is [Learning](../catalog.md#learning).
+
 ## 3. Icons
 
 Each new name gets one pictogram from [the icon prompt](../prompts/02-create-icons.md):
