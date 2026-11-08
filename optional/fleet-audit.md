@@ -24,6 +24,6 @@ My bots:
 
 ## Reading the result
 
-A "clear overlap" is two bots you would ask the same question. A "maybe" is often two bots that look similar but keep different context, such as one coding bot per project. Leave those alone unless switching between them annoys you.
+A "clear overlap" is two bots you would ask the same question. Matching the same row in the [catalog](../catalog.md) is that case. A "maybe" is often two bots that look similar but keep different context, such as one coding bot per project. Leave those alone unless switching between them annoys you.
 
 If you want to merge a group, go to [consolidate-bots.md](consolidate-bots.md).
