@@ -1,11 +1,11 @@
 ---
 name: agent-makeover
-description: Give the user's Grok Bot bots short names that say what they do and a matching custom icon each, using the Agent Makeover prompts and icon library. Use when the user asks to rename their bots, replace default avatars, tidy their sidebar, or says "do the Agent Makeover".
+description: Organise the user's Grok Bot bots by part of life, with a short name and a matching icon from the Agent Makeover catalog. Use when the user asks to rename their bots, replace default avatars, tidy their sidebar, or says "do the Agent Makeover".
 ---
 
 # Agent Makeover
 
-You are helping the user rename their existing Grok Bot bots by function and give each one a matching icon. Work in this order and stop for the user's choice where it says so.
+You are helping the user organise their existing Grok Bot bots by part of life: a short name and a matching icon each. Work in this order and stop for the user's choice where it says so.
 
 Base URL for files in this kit: `https://raw.githubusercontent.com/DeVFirmino/grok-bot-names-and-icons/main/`
 
@@ -22,51 +22,55 @@ For each bot, suggest one short name and one alternative:
 - No version numbers, and no "assistant", "bot", "helper", "new" or "pro".
 - Different first letters where possible.
 
+Where the job matches a row in `catalog.md` (same folder, or `https://github.com/DeVFirmino/grok-bot-names-and-icons/blob/main/catalog.md`), prefer that row's name. General is the spare name when one bot still covers several parts of life.
+
 Return a table: current name, job, suggested name, alternative. List any bots that seem to do the same job separately, without proposing a merge. Wait for the user to pick.
 
 ## 3. Pick icons
 
-Match each chosen name to an icon from the library. Each icon is a 512 x 512 PNG at `assets/library/png/<name>.png` (SVG source at `assets/library/svg/<name>.svg`):
+Match each chosen name to an icon from the library. Each icon is a 512 x 512 PNG at `assets/library/png/<name>.png` (SVG source at `assets/library/svg/<name>.svg`).
 
-| Icon | Fits jobs like |
-| --- | --- |
-| analytics | metrics, reports, dashboards |
-| blog | writing posts, drafts |
-| budget | budgeting, spending, bills |
-| calendar | scheduling, reminders by date |
-| career | job search, applications, CV |
-| dev | coding, debugging |
-| docs | documents, contracts, admin |
-| email | inbox, replies |
-| finance | money, wallet, accounts |
-| fitness | workouts, training |
-| general | general-purpose assistant |
-| health | health, medical notes |
-| home | household, chores |
-| ideas | brainstorming |
-| invest | investing, markets |
-| language | languages, translation |
-| marketing | social posts, campaigns |
-| meetings | meetings, people, CRM |
-| music | music, playlists |
-| news | news, X and feeds |
-| notes | notes, journaling |
-| pets | pet care |
-| photos | images, photo editing |
-| radar | monitoring, alerts, trends |
-| reading | books, reading lists |
-| recipes | cooking, meal plans |
-| research | deep research, sources |
-| security | security, accounts, privacy |
-| shopping | shopping, deals |
-| study | study, courses, exams |
-| support | help desk, troubleshooting |
-| tasks | to-dos, task lists |
-| travel | trips, flights |
-| video | video, YouTube |
-| weather | weather |
+Read `catalog.md` for the situation and the tasks to hand that bot. Use those when you explain a pair. Stay inside the job line below and that catalog row. The areas match the catalog:
 
-Show the user the pairs (name, icon file) and let them swap any before applying. If nothing fits, say so and offer to describe a custom icon in the same style instead: white line pictogram, rounded square tile with a soft vertical gradient in one colour, glyph inside the central circle, no text or logos.
+| Area | Icon | Fits jobs like |
+| --- | --- | --- |
+| Work | career | job search, applications, CV |
+| Work | dev | coding, debugging |
+| Work | meetings | meetings, people, CRM |
+| Work | docs | documents, contracts, admin |
+| Work | analytics | metrics, reports, dashboards |
+| Work | support | help desk, troubleshooting |
+| Money | budget | budgeting, spending, bills |
+| Money | finance | money, wallet, accounts |
+| Money | invest | investing, markets |
+| Money | shopping | shopping, deals |
+| Home | home | household, chores |
+| Home | recipes | cooking, meal plans |
+| Home | pets | pet care |
+| Health | health | health, medical notes |
+| Health | fitness | workouts, training |
+| Learning | study | study, courses, exams |
+| Learning | reading | books, reading lists |
+| Learning | research | deep research, sources |
+| Learning | language | languages, translation |
+| Keeping up | email | inbox, replies |
+| Keeping up | calendar | scheduling, reminders by date |
+| Keeping up | tasks | to-dos, task lists |
+| Keeping up | news | news, X and feeds |
+| Keeping up | radar | monitoring, alerts, trends |
+| Writing | blog | writing posts, drafts |
+| Writing | ideas | brainstorming |
+| Writing | notes | notes, journaling |
+| Writing | marketing | social posts, campaigns |
+| Making | photos | images, photo editing |
+| Making | music | music, playlists |
+| Making | video | video, YouTube |
+| Trips | travel | trips, flights |
+| Trips | weather | weather |
+| Accounts | security | security, accounts, privacy |
+| General | general | general-purpose assistant |
+
+Show the user the pairs (name, icon file, area) and let them swap any before applying. If nothing fits, say so and offer a custom icon in the same style: white line pictogram, rounded square tile with a soft vertical gradient in one colour, glyph inside the central circle, no text or logos.
 
 ## 4. Apply, one bot at a time
 
